@@ -2,12 +2,12 @@
 	<PageContainer>
 		<VCard class="pa-8">
 			<h2 class="text-h6 font-weight-bold primary--text mb-4">
-				Premiers pas
+				Bienvenue sur mon simulateur de prise en charge !
 			</h2>
 
-			<p>Vous venez de créer une nouvelle application front-end avec Vue Dash.</p>
+			<p>L'objectif de cette application est de permettre à chaque citoyen de connaitre ses droits en terme de prise en charge.</p>
 
-			<p>Tout est prêt, vous pouvez commencer à développer&nbsp;!</p>
+			<p>Vous pouvez essayez le simulateur dès maintenant ici :</p>
 
 			<RouterLink
 				:to=" {
@@ -15,22 +15,18 @@
 				}"
 				data-cy="aboutLink"
 			>
-				À propos
+				<VBtn
+					color="rgb(10, 52, 123)"
+					height="auto"
+					min-height="36px"
+					class="text-wrap mt-8"
+					data-cy="sendNotification"
+					dark
+					@click="sendNotification"
+				>
+					Envoyer une notification exemple
+				</VBtn>
 			</RouterLink>
-
-			<VSpacer />
-
-			<VBtn
-				color="accent"
-				outlined
-				height="auto"
-				min-height="36px"
-				class="text-wrap mt-8"
-				data-cy="sendNotification"
-				@click="sendNotification"
-			>
-				Envoyer une notification exemple
-			</VBtn>
 		</VCard>
 	</PageContainer>
 </template>
@@ -60,7 +56,7 @@
 		@Meta
 		metaInfo(): MetaInfo {
 			return {
-				title: 'Premiers pas',
+				title: 'Accueil',
 				meta: [
 					{
 						name: 'description',

@@ -1,24 +1,8 @@
 <template>
 	<HeaderBar
-		service-title="Projet mon_simulateur_de_prise_en_charge"
+		service-title="Mon simulateur de prise en charge"
 		:navigation-items="navigationItems"
-	>
-		<UserMenuBtn
-			v-if="!$maintenanceEnabled"
-			full-name="Utilisateur"
-			additional-information="Développeur"
-		>
-			<VListItem
-				v-for="(item, index) in navigationItems"
-				:key="index"
-				:disabled="item.disabled"
-				:to="item.to ? item.to : null"
-				exact
-			>
-				<VListItemTitle>{{ item.label }}</VListItemTitle>
-			</VListItem>
-		</UserMenuBtn>
-	</HeaderBar>
+	/>
 </template>
 
 <script lang="ts">
@@ -36,9 +20,15 @@
 
 			return [
 				{
-					label: 'Accueil',
+					label: 'Acceuil',
 					to: {
 						name: 'home'
+					}
+				},
+				{
+					label: 'Le simulateur',
+					to: {
+						name: 'simulateur'
 					}
 				},
 				{

@@ -12,6 +12,7 @@ const config = defineConfig({
 		// Auto-load VueDot components
 		config.plugin('VuetifyLoaderPlugin').tap(vueDotLoader);
 	},
+  lintOnSave: false,
 	configureWebpack: {
 		devtool: 'source-map',
 		optimization: {

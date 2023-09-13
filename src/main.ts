@@ -33,6 +33,9 @@ Vue.config.productionTip = false;
 // Add global var for maintenance
 Vue.prototype.$maintenanceEnabled = MAINTENANCE_ENABLED;
 
+// Mute slugify error
+Vue.config.silent = true;
+
 // Create main Vue instance
 new Vue({
 	router,
