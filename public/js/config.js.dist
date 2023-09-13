@@ -1,0 +1,8 @@
+// Env vars
+window.VUE_APP_ENV = 'dev';
+// Base URL of Axios requests
+window.API_URL = 'http://localhost:8000/';
+// Maintenance
+window.MAINTENANCE = 'false';
+window.MAINTENANCE_TITLE = '';
+window.MAINTENANCE_MESSAGE = '';
