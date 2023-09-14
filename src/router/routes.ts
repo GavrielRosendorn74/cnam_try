@@ -15,8 +15,8 @@ export const routes = [
 		path: '/simulateur',
 		name: 'simulateur',
 		component: () => import(
-			/* webpackChunkName: "about" */
-			'@/views/About.vue'
+			/* webpackChunkName: "simulateur" */
+			'@/views/Simulateur.vue'
 		)
 	},
 	{

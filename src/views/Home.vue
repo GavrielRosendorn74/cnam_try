@@ -11,9 +11,8 @@
 
 			<RouterLink
 				:to=" {
-					name: 'about'
+					name: 'simulateur'
 				}"
-				data-cy="aboutLink"
 			>
 				<VBtn
 					color="rgb(10, 52, 123)"
@@ -22,9 +21,9 @@
 					class="text-wrap mt-8"
 					data-cy="sendNotification"
 					dark
-					@click="sendNotification"
+					@click="goToSimulateur"
 				>
-					Envoyer une notification exemple
+					Ouvrir le simulateur
 				</VBtn>
 			</RouterLink>
 		</VCard>
@@ -37,21 +36,8 @@
 
 	import { Meta, MetaInfo } from '@/decorators';
 
-	import { mapActions } from 'vuex';
-
-	@Component({
-		// Vuex bindings
-		methods: mapActions('notification', ['addNotification'])
-	})
+	@Component({})
 	export default class Home extends Vue {
-		/* istanbul ignore next */
-		sendNotification(): void {
-			this.addNotification({
-				type: 'success',
-				message: 'Exemple de notification'
-			});
-		}
-
 		/* istanbul ignore next */
 		@Meta
 		metaInfo(): MetaInfo {
